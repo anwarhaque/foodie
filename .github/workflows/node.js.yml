@@ -61,7 +61,7 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          docker pull anwarulhaque/foodie:latest
+          sudo docker pull anwarulhaque/foodie:latest
           docker-compose down
           docker-compose up -d
 
