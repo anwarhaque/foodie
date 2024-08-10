@@ -45,7 +45,7 @@ jobs:
 
       - name: Build and push Docker image using Buildx
         run: |
-          docker buildx build -t anwarulhaque/foodie:latest --push 
+          sudo docker buildx build -t anwarulhaque/foodie:latest --push 
 
       # - name: Build and push Docker image
       #   run: |
