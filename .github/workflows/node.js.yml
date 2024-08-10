@@ -13,20 +13,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Docker
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker.io
-          sudo systemctl start docker
-          sudo systemctl enable docker
-          
-      - name: Add user to the Docker group
-        run: |
-          sudo usermod -aG docker $USER
-          newgrp docker
+      # - name: Install Docker
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y docker.io
+      #     sudo systemctl start docker
+      #     sudo systemctl enable docker
+
+      # - name: Add user to the Docker group
+      #   run: |
+      #     sudo usermod -aG docker $USER
+      #     newgrp docker
 
       - name: Check Docker Version
-        run: docker version
+        run: docker -v
 
       - name: Reset Docker Buildx
         run: |
