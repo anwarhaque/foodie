@@ -19,6 +19,11 @@ jobs:
           sudo apt-get install -y docker.io
           sudo systemctl start docker
           sudo systemctl enable docker
+          
+      - name: Add user to the Docker group
+        run: |
+          sudo usermod -aG docker $USER
+          newgrp docker
 
       - name: Check Docker Version
         run: docker version
