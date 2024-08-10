@@ -56,3 +56,4 @@ jobs:
           docker pull anwarulhaque/foodie:latest
           docker-compose down
           docker-compose up -d
+
