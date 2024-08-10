@@ -2,7 +2,7 @@ const { Router } = require("express");
 const userRoutes = require("../module/routes/userRoutes");
 
 const baseRouter = Router();
-const basePath = '/api'
+const basePath = '/foodie/api'
 
 // baseRouter.get('/user', (req, res)=>{
 //     res.json({data:{name:"Anwarul", age:20}})
