@@ -56,6 +56,9 @@ jobs:
     runs-on: self-hosted
     needs: build
     steps:
+      - name: Login to DockerHub
+        run: sudo docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
       - name: Deploy to EC2
         run: |
           docker pull anwarulhaque/foodie:latest
