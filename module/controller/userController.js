@@ -40,7 +40,7 @@ const listUser = async (req, res) => {
         return res.status(200).json({
             meta: { msg: "User list found successfully", status: true },
             data: users,
-            test:'test'
+            test:'Test'
         });
     } catch (error) {
         return res.json({
