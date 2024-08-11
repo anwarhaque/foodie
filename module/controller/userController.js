@@ -15,7 +15,8 @@ const addUser = async (req, res) => {
 
         return res.status(200).json({
             meta: { msg: "User created successfully", status: true },
-            data: user
+            data: user,
+            test:'test'
         });
     } catch (error) {
         return res.json({
